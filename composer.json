@@ -7,6 +7,8 @@
         "silverstripe/recipe-plugin": "^1.2",
         "silverstripe/recipe-cms": "4.8.0@stable",
         "silverstripe/login-forms": "4.4.1@stable",
+        "cwp/cwp": "dev-master",
+        "cwp/starter-theme": "dev-wayfinder1.1",
         "burnbright/silverstripe-hasonefield": "dev-master",
         "undefinedoffset/sortablegridfield": "dev-master",
         "bummzack/sortablefile": "dev-master",
@@ -16,7 +18,8 @@
         "tractorcow/silverstripe-sliderfield": "dev-master",
         "symbiote/silverstripe-multivaluefield": "^5.0",
         "jinjie/codeeditorfield": "^0.0.4",
-        "silverstripe/tagfield": "2.3.*"
+        "silverstripe/tagfield": "2.3.*",
+        "silverstripe/ckan-registry": "dev-master"
     },
     "require-dev": {
         "sminnee/phpunit": "^5.7",
@@ -44,6 +47,12 @@
     "config": {
         "process-timeout": 600
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/i3waitematadhb/cwp-starter-theme.git"
+        }
+    ],
     "prefer-stable": true,
     "minimum-stability": "dev"
 }
