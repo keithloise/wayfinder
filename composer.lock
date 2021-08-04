@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df42ed23d34937a3f80cd22ff8bbea3f",
+    "content-hash": "e07bdefaf2b48d65b53f9906b1ab4fb5",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -1942,6 +1942,56 @@
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
+            "name": "psr/event-dispatcher",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/event-dispatcher.git",
+                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\EventDispatcher\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Standard interfaces for event handling.",
+            "keywords": [
+                "events",
+                "psr",
+                "psr-14"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/event-dispatcher/issues",
+                "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
+            },
+            "time": "2019-01-08T18:20:26+00:00"
+        },
+        {
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -2991,6 +3041,58 @@
             "time": "2021-05-16T22:53:21+00:00"
         },
         {
+            "name": "silverstripe/event-dispatcher",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-event-dispatcher.git",
+                "reference": "636a7e59197fc9f6303f7ef0f091d50b48aad544"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-event-dispatcher/zipball/636a7e59197fc9f6303f7ef0f091d50b48aad544",
+                "reference": "636a7e59197fc9f6303f7ef0f091d50b48aad544",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2",
+                "psr/event-dispatcher": "^1",
+                "silverstripe/framework": "^4.5.1",
+                "symfony/event-dispatcher": "^4.4 || ^5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\EventDispatcher\\": "src/",
+                    "SilverStripe\\EventDispatcher\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Publish and subscribe to events in Silverstripe CMS or your Silverstripe application",
+            "keywords": [
+                "cms",
+                "events",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/silverstripe/silverstripe-event-dispatcher/issues",
+                "source": "https://github.com/silverstripe/silverstripe-event-dispatcher/tree/0.1.2"
+            },
+            "time": "2021-03-18T03:26:49+00:00"
+        },
+        {
             "name": "silverstripe/framework",
             "version": "4.8.0",
             "source": {
@@ -3112,32 +3214,26 @@
         },
         {
             "name": "silverstripe/graphql",
-            "version": "3.5.0",
+            "version": "4.0.0-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-graphql.git",
-                "reference": "149b4ed074a7e46750287c22e08c91d421abe1cc"
+                "reference": "7015490277672ba9b25385d5e030d0576d5dd33c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-graphql/zipball/149b4ed074a7e46750287c22e08c91d421abe1cc",
-                "reference": "149b4ed074a7e46750287c22e08c91d421abe1cc",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-graphql/zipball/7015490277672ba9b25385d5e030d0576d5dd33c",
+                "reference": "7015490277672ba9b25385d5e030d0576d5dd33c",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/framework": "^4.2",
+                "silverstripe/event-dispatcher": "^0.1.2",
+                "silverstripe/framework": "^4",
                 "silverstripe/vendor-plugin": "^1.0",
-                "webonyx/graphql-php": "~0.12.6"
-            },
-            "conflict": {
-                "dnadesign/silverstripe-elemental": "<4.6",
-                "silverstripe/admin": "<1.8",
-                "silverstripe/asset-admin": "<1.8",
-                "silverstripe/campaign-admin": "<1.8",
-                "silverstripe/cms": "<1.8",
-                "silverstripe/versioned-admin": "<1.8"
+                "webonyx/graphql-php": "^14.0"
             },
             "require-dev": {
+                "silverstripe/versioned": "^1.0@dev",
                 "sminnee/phpunit": "^5.7",
                 "sminnee/phpunit-mock-objects": "^3.4.5",
                 "squizlabs/php_codesniffer": "^3.0"
@@ -3147,6 +3243,11 @@
                 "silverstripe/graphql-devtools": "Adds in-browser tools for testing and debugging GraphQL queries"
             },
             "type": "silverstripe-vendormodule",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "SilverStripe\\GraphQL\\": "src/",
@@ -3160,9 +3261,9 @@
             "description": "GraphQL server for SilverStripe models and other data",
             "support": {
                 "issues": "https://github.com/silverstripe/silverstripe-graphql/issues",
-                "source": "https://github.com/silverstripe/silverstripe-graphql/tree/3.5.0"
+                "source": "https://github.com/silverstripe/silverstripe-graphql/tree/4.0.0-alpha2"
             },
-            "time": "2021-06-02T04:26:50+00:00"
+            "time": "2021-06-08T01:46:54+00:00"
         },
         {
             "name": "silverstripe/hybridsessions",
@@ -3322,58 +3423,6 @@
                 "source": "https://github.com/silverstripe/silverstripe-mimevalidator/tree/2.1.1"
             },
             "time": "2020-12-21T01:55:44+00:00"
-        },
-        {
-            "name": "silverstripe/recipe-cms",
-            "version": "4.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe/recipe-cms.git",
-                "reference": "f6b97edb3120ea707ce21aa477dc5285bd0d9225"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/recipe-cms/zipball/f6b97edb3120ea707ce21aa477dc5285bd0d9225",
-                "reference": "f6b97edb3120ea707ce21aa477dc5285bd0d9225",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 || ^8",
-                "silverstripe/admin": "1.8.0@stable",
-                "silverstripe/asset-admin": "1.8.0@stable",
-                "silverstripe/campaign-admin": "1.8.0@stable",
-                "silverstripe/cms": "4.8.0@stable",
-                "silverstripe/errorpage": "1.8.0@stable",
-                "silverstripe/graphql": "3.5.0@stable",
-                "silverstripe/recipe-core": "4.8.0@stable",
-                "silverstripe/recipe-plugin": "^1.5",
-                "silverstripe/reports": "4.8.0@stable",
-                "silverstripe/siteconfig": "4.8.0@stable",
-                "silverstripe/versioned": "1.8.0@stable",
-                "silverstripe/versioned-admin": "1.8.0@stable"
-            },
-            "require-dev": {
-                "sminnee/phpunit": "^5.7",
-                "sminnee/phpunit-mock-objects": "^3.4.5"
-            },
-            "type": "silverstripe-recipe",
-            "extra": {
-                "project-files": [
-                    "app/src/*"
-                ],
-                "resources-dir": "_resources"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "SilverStripe recipe for fully featured page and asset content editing",
-            "homepage": "http://silverstripe.org",
-            "support": {
-                "issues": "https://github.com/silverstripe/recipe-cms/issues",
-                "source": "https://github.com/silverstripe/recipe-cms/tree/4.8.0"
-            },
-            "time": "2021-06-07T22:31:29+00:00"
         },
         {
             "name": "silverstripe/recipe-core",
@@ -4362,6 +4411,237 @@
                 }
             ],
             "time": "2021-07-21T12:19:41+00:00"
+        },
+        {
+            "name": "symfony/deprecation-contracts",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "5f38c8804a9e97d23e0c8d63341088cd8a22d627"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/5f38c8804a9e97d23e0c8d63341088cd8a22d627",
+                "reference": "5f38c8804a9e97d23e0c8d63341088cd8a22d627",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "2.4-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "function.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "A generic function and convention to trigger deprecation notices",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-03-23T23:28:01+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v5.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "f2fd2208157553874560f3645d4594303058c4bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/f2fd2208157553874560f3645d4594303058c4bd",
+                "reference": "f2fd2208157553874560f3645d4594303058c4bd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1",
+                "symfony/event-dispatcher-contracts": "^2",
+                "symfony/polyfill-php80": "^1.16"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<4.4"
+            },
+            "provide": {
+                "psr/event-dispatcher-implementation": "1.0",
+                "symfony/event-dispatcher-implementation": "2.0"
+            },
+            "require-dev": {
+                "psr/log": "^1|^2|^3",
+                "symfony/config": "^4.4|^5.0",
+                "symfony/dependency-injection": "^4.4|^5.0",
+                "symfony/error-handler": "^4.4|^5.0",
+                "symfony/expression-language": "^4.4|^5.0",
+                "symfony/http-foundation": "^4.4|^5.0",
+                "symfony/service-contracts": "^1.1|^2",
+                "symfony/stopwatch": "^4.4|^5.0"
+            },
+            "suggest": {
+                "symfony/dependency-injection": "",
+                "symfony/http-kernel": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\EventDispatcher\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/event-dispatcher/tree/v5.3.4"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-07-23T15:55:36+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher-contracts",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher-contracts.git",
+                "reference": "69fee1ad2332a7cbab3aca13591953da9cdb7a11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/69fee1ad2332a7cbab3aca13591953da9cdb7a11",
+                "reference": "69fee1ad2332a7cbab3aca13591953da9cdb7a11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "psr/event-dispatcher": "^1"
+            },
+            "suggest": {
+                "symfony/event-dispatcher-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "2.4-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\EventDispatcher\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to dispatching event",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v2.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-03-23T23:28:01+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -5828,26 +6108,37 @@
         },
         {
             "name": "webonyx/graphql-php",
-            "version": "v0.12.6",
+            "version": "v14.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webonyx/graphql-php.git",
-                "reference": "4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95"
+                "reference": "36b83621deb5eae354347a2e86dc7aec81b32a82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95",
-                "reference": "4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/36b83621deb5eae354347a2e86dc7aec81b32a82",
+                "reference": "36b83621deb5eae354347a2e86dc7aec81b32a82",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "ext-mbstring": "*",
-                "php": ">=5.6"
+                "php": "^7.1||^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8",
+                "amphp/amp": "^2.3",
+                "doctrine/coding-standard": "^6.0",
+                "nyholm/psr7": "^1.2",
+                "phpbench/phpbench": "^0.16.10",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "0.12.82",
+                "phpstan/phpstan-phpunit": "0.12.18",
+                "phpstan/phpstan-strict-rules": "0.12.9",
+                "phpunit/phpunit": "^7.2|^8.5",
                 "psr/http-message": "^1.0",
-                "react/promise": "2.*"
+                "react/promise": "2.*",
+                "simpod/php-coveralls-mirror": "^3.0",
+                "squizlabs/php_codesniffer": "3.5.4"
             },
             "suggest": {
                 "psr/http-message": "To use standard GraphQL server",
@@ -5871,9 +6162,15 @@
             ],
             "support": {
                 "issues": "https://github.com/webonyx/graphql-php/issues",
-                "source": "https://github.com/webonyx/graphql-php/tree/0.12.x"
+                "source": "https://github.com/webonyx/graphql-php/tree/v14.9.0"
             },
-            "time": "2018-09-02T14:59:54+00:00"
+            "funding": [
+                {
+                    "url": "https://opencollective.com/webonyx-graphql-php",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2021-06-15T16:14:17+00:00"
         }
     ],
     "packages-dev": [
@@ -6465,7 +6762,6 @@
                 "issues": "https://github.com/sebastianbergmann/resource-operations/issues",
                 "source": "https://github.com/sebastianbergmann/resource-operations/tree/master"
             },
-            "abandoned": true,
             "time": "2015-07-28T20:34:47+00:00"
         },
         {
@@ -6675,7 +6971,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "silverstripe/recipe-cms": 0,
         "silverstripe/login-forms": 0,
         "cwp/cwp": 20,
         "cwp/starter-theme": 20,
@@ -6686,7 +6981,17 @@
         "unclecheese/display-logic": 20,
         "tractorcow/silverstripe-colorpicker": 20,
         "tractorcow/silverstripe-sliderfield": 20,
-        "silverstripe/ckan-registry": 20
+        "silverstripe/ckan-registry": 20,
+        "silverstripe/admin": 0,
+        "silverstripe/asset-admin": 0,
+        "silverstripe/campaign-admin": 0,
+        "silverstripe/cms": 0,
+        "silverstripe/errorpage": 0,
+        "silverstripe/recipe-core": 0,
+        "silverstripe/reports": 0,
+        "silverstripe/siteconfig": 0,
+        "silverstripe/versioned": 0,
+        "silverstripe/versioned-admin": 0
     },
     "prefer-stable": true,
     "prefer-lowest": false,
